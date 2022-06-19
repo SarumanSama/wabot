@@ -19,6 +19,6 @@ module.exports = class command extends Command {
 
     execute = async (M) => {
         const { images } = await this.helper.utils.fetch('https://api.waifu.im/random/?selected_tags=waifu')
-        return void (await M.reply(await this.helper.utils.getBuffer(images[0].url), 'image'))
+        return void (await M.reply(await this.helper.utils.getBuffer(images[0].url), 'image', caption: 'well' ))
     }
 }
